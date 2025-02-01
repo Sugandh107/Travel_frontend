@@ -13,7 +13,7 @@ function Message() {
   useEffect(() => {
     const fetchChats = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/api/chats/${user._id}`);
+        const response = await fetch(`https://travel-backend-lw95.onrender.com/api/chats/${user._id}`);
         const chatData = await response.json();
         setChats(chatData);
       } catch (err) {
@@ -28,7 +28,7 @@ function Message() {
     setActiveChat(chat);
 
     try {
-      const response = await fetch(`http://localhost:5000/api/messages/${chat._id}`);
+      const response = await fetch(`https://travel-backend-lw95.onrender.com/api/messages/${chat._id}`);
       const messagesData = await response.json();
       setMessages(messagesData);
     } catch (err) {
@@ -40,7 +40,7 @@ function Message() {
     if (!newMessage || !activeChat) return;
 
     try {
-      const response = await fetch('http://localhost:5000/api/messages', {
+      const response = await fetch('https://travel-backend-lw95.onrender.com/api/messages', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

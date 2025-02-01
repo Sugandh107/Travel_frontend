@@ -18,13 +18,13 @@ function BlogsPage() {
     const fetchData = async () => {
       try {
         const destinationResponse = await fetch(
-          `http://localhost:5000/api/destinations/${destinationId}`
+          `https://travel-backend-lw95.onrender.com/api/destinations/${destinationId}`
         );
         const destinationData = await destinationResponse.json();
         setDestination(destinationData);
 
         const blogsResponse = await fetch(
-          `http://localhost:5000/api/blogs/${destinationId}`
+          `https://travel-backend-lw95.onrender.com/api/blogs/${destinationId}`
         );
         const blogsData = await blogsResponse.json();
         setBlogs(blogsData);
@@ -40,7 +40,7 @@ function BlogsPage() {
     if (!newBlog.trim()) return; // Prevent adding empty blog
 
     try {
-      const response = await fetch('http://localhost:5000/api/blogs', {
+      const response = await fetch('https://travel-backend-lw95.onrender.com/api/blogs', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

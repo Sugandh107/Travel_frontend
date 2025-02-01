@@ -14,7 +14,7 @@ function ChatPage() {
   useEffect(() => {
     const fetchConversations = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/api/messages/conversations/${userData?._id}`);
+        const response = await fetch(`https://travel-backend-lw95.onrender.com/api/messages/conversations/${userData?._id}`);
         const data = await response.json();
         setConversations(data);
       } catch (err) {
@@ -25,7 +25,7 @@ function ChatPage() {
     // Fetch all users to enable messaging
     const fetchUsers = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/users');
+        const response = await fetch('https://travel-backend-lw95.onrender.com/api/users');
         const data = await response.json();
         // Remove the current user from the list
         setAllUsers(data.filter(u => u._id !== user._id));

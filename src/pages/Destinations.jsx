@@ -22,7 +22,7 @@ function Destinations() {
 
   const fetchDestinations = async () => {
     try {
-      const res = await fetch('http://localhost:5000/api/destinations');
+      const res = await fetch('https://travel-backend-lw95.onrender.com/api/destinations');
       const data = await res.json();
       setDestinations(data);
       setFilteredDestinations(data);
@@ -48,7 +48,7 @@ function Destinations() {
       const imageUrl = imgRes.data.data.url;
 
       const destinationData = { name, description, imageUrl };
-      await axios.post('http://localhost:5000/api/destinations', destinationData).then(()=>{
+      await axios.post('https://travel-backend-lw95.onrender.com/api/destinations', destinationData).then(()=>{
        toast.success("Destination Added ")
       }).catch()
 
@@ -64,7 +64,7 @@ function Destinations() {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/destinations/${id}`).then(()=>{
+      await axios.delete(`https://travel-backend-lw95.onrender.com/api/destinations/${id}`).then(()=>{
         toast.success("Destination Deleted ")
        })
       setDestinations((prev) => prev.filter((destination) => destination._id !== id));

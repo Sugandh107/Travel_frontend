@@ -16,7 +16,7 @@ function UserProfilePage() {
     // Fetch the user data by userId
     const fetchUserData = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/api/users/${userId}`);
+        const response = await fetch(`https://travel-backend-lw95.onrender.com/api/users/${userId}`);
         const userData = await response.json();
         setUser(userData);
         setPosts(userData.posts || []); // Set posts if available

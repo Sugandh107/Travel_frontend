@@ -10,7 +10,7 @@ function MessageInbox() {
   useEffect(() => {
     const fetchConversations = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/api/messages/conversations/${user._id}`);
+        const response = await fetch(`https://travel-backend-lw95.onrender.com/api/messages/conversations/${user._id}`);
         const data = await response.json();
         setConversations(data);
       } catch (err) {

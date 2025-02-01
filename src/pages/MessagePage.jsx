@@ -17,14 +17,14 @@ function MessagePage() {
       try {
         // Fetch messages
         const messagesResponse = await fetch(
-          `http://localhost:5000/api/messages/${userId}/${recipientId}`
+          `https://travel-backend-lw95.onrender.com/api/messages/${userId}/${recipientId}`
         );
         const messagesData = await messagesResponse.json();
         setMessages(messagesData);
 
         // Fetch recipient info
         const recipientResponse = await fetch(
-          `http://localhost:5000/api/users/${recipientId}`
+          `https://travel-backend-lw95.onrender.com/api/users/${recipientId}`
         );
         const recipientData = await recipientResponse.json();
         setRecipientInfo(recipientData);
@@ -46,7 +46,7 @@ function MessagePage() {
     if (!newMessage.trim()) return;
 
     try {
-      const response = await fetch('http://localhost:5000/api/messages', {
+      const response = await fetch('https://travel-backend-lw95.onrender.com/api/messages', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

@@ -21,7 +21,7 @@ function OwnUserProfile() {
   useEffect(() => {
     const fetchAllUsers = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/users");
+        const res = await axios.get("https://travel-backend-lw95.onrender.com/api/users");
         const allUsers = res.data;
         const foundUser = allUsers.find((u) => u.email === user?.email);
         setPosts(foundUser?.posts || []);
@@ -57,7 +57,7 @@ function OwnUserProfile() {
         imageUrl,
       };
 
-      await axios.post("http://localhost:5000/api/users/add-post", postData);
+      await axios.post("https://travel-backend-lw95.onrender.com/api/users/add-post", postData);
 
       // Reset form and refresh posts
       setImage(null);

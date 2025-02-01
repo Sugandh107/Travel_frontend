@@ -12,7 +12,7 @@ const useUserData = (email) => {
         setLoading(true);
         setError(null); // Reset any previous errors
         try {
-          const response = await axios.get("http://localhost:5000/api/users/user-profile", {
+          const response = await axios.get("https://travel-backend-lw95.onrender.com/api/users/user-profile", {
             params: { email },
           });
           setUserData(response.data);

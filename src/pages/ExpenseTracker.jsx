@@ -20,7 +20,7 @@ const ExpenseTracker = () => {
     const fetchExpenses = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/expense/${userData?._id}`
+          `https://travel-backend-lw95.onrender.com/api/expense/${userData?._id}`
         );
         setExpenses(Array.isArray(response.data) ? response.data : []);
       } catch (err) {
@@ -42,7 +42,7 @@ const ExpenseTracker = () => {
     }
 
     try {
-      const response = await axios.post("http://localhost:5000/api/expense/add", {
+      const response = await axios.post("https://travel-backend-lw95.onrender.com/api/expense/add", {
         userId,
         name,
         amount,

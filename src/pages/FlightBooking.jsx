@@ -11,7 +11,7 @@
     const [country, setCountry] = useState(""); // New state for country name
 
     const fetchFlights = async () => {
-      const response = await fetch("http://localhost:5000/api/flights", {
+      const response = await fetch("https://travel-backend-lw95.onrender.com/api/flights", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -27,7 +27,7 @@
     };
 
     const fetchHotels = async () => {
-      const response = await fetch(`http://localhost:5000/api/hotels/${place}/${country}`);
+      const response = await fetch(`https://travel-backend-lw95.onrender.com/api/hotels/${place}/${country}`);
       const data = await response.json();
       setHotelData(data);
     };
