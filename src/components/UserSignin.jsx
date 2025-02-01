@@ -3,7 +3,7 @@ import { AuthContext } from "../context/AuthProvider";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom"; // Import useNavigate for navigation
 
-const Signup = () => {
+const UserSignin = () => {
   const { createUser } = useContext(AuthContext);
   const [formData, setFormData] = useState({
     name: "",
@@ -109,4 +109,4 @@ const Signup = () => {
   );
 };
 
-export default Signp;
+export default UserSignin;

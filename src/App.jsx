@@ -19,7 +19,7 @@ import MessageInbox from "./pages/MessageInbox";
 import ExpenseTracker from "./pages/ExpenseTracker";
 import Footer from "./components/Footer";
 import FlightBooking from "./pages/FlightBooking";
-import Signup from "./components/SignUp";
+import UserSignin from "./components/UserSignin";
 
 function App() {
   const location = useLocation(); // Get the current route
@@ -36,7 +36,7 @@ function App() {
         <Route path="/packages" element={<Packages />} />
         <Route path="/flights" element={<FlightBooking />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
+        <Route path="/signup" element={<UserSignin/>} />
         <Route path="/destination" element={<Destinations />} />
         <Route path="/destination/:destinationId" element={<BlogsPage />} />
         <Route path="/user/:userId" element={<UserProfilePage />} />
