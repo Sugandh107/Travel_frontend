@@ -1,0 +1,74 @@
+.hero-container {
+    background: url('../images/img-home.jpg') center center/cover no-repeat;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+  }
+  
+  .hero-container video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  
+  .hero-container .video-overlay {
+    z-index: 2;
+    position: absolute;
+  }
+  
+  .hero-container .video-overlay h1 {
+    color: #fff;
+    font-size: 100px;
+  }
+  
+  .hero-container .video-overlay p {
+    margin: 10px;
+    color: #fff;
+    font-size: 40px;
+  }
+  
+  .hero-container .video-overlay .hero-btns {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .hero-container .video-overlay .hero-btns .fa-play-circle {
+    margin-left: 5px;
+  }
+  
+  @media screen and (max-width: 960px) {
+    .hero-container .video-overlay h1 {
+      font-size: 50px;
+    }
+  
+    .hero-container .video-overlay p {
+      font-size: 40px;
+    }
+  
+    .hero-container .video-overlay .hero-btns button {
+      width: 90%;
+      margin: 10px 0;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .hero-container .video-overlay h1 {
+      font-size: 50px;
+    }
+  
+    .hero-container .video-overlay p {
+      font-size: 30px;
+    }
+  
+    .hero-container .video-overlay .hero-btns button {
+      width: 90%;
+      margin: 10px 0;
+    }
+  }
+  
