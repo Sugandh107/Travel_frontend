@@ -6,7 +6,6 @@ import Navbar from "./components/Navbar";
 // import Services from "./components/Services";
 import Packages from "./pages/Packages";
 import Login from "./components/Login";
-import Signup from "./components/SignUp";
 import Destinations from "./pages/Destinations";
 import BlogsPage from "./pages/BlogsPage";
 import UserProfilePage from "./pages/UserProfilePage";
@@ -20,6 +19,7 @@ import MessageInbox from "./pages/MessageInbox";
 import ExpenseTracker from "./pages/ExpenseTracker";
 import Footer from "./components/Footer";
 import FlightBooking from "./pages/FlightBooking";
+import Signup from "./components/SignUp";
 
 function App() {
   const location = useLocation(); // Get the current route
