@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { AuthContext } from '../context/AuthProvider';
-import useUserData from '../hooks/useUserdata';
+import useUserData from '../hooks/useUserData.js';
 import { toast } from 'react-toastify';
 
 function ProfileDrawer() {

@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from "react";
 import { AuthContext } from "../context/AuthProvider";
 import axios from "axios";
-import useUserData from "../hooks/useUserdata";
+import useUserData from "../hooks/useUserData";
 
 function OwnUserProfile() {
   const { user } = useContext(AuthContext);
