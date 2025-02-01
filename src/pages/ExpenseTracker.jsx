@@ -1,7 +1,7 @@
 // src/components/ExpenseTracker.js
 import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
-import useUserData from "../hooks/useUserdata";
+import useUserData from "../hooks/useUserData";
 import { AuthContext } from "../context/AuthProvider";
 
 const ExpenseTracker = () => {

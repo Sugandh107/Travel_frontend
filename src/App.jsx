@@ -22,9 +22,9 @@ import FlightBooking from "./pages/FlightBooking";
 import UserSignin from "./components/UserSignin";
 
 function App() {
-  const location = useLocation(); // Get the current route
   
-  // Define routes where Navbar and Footer should not appear
+  const location = useLocation(); // Get the current route  
+// Define routes where Navbar and Footer should not appear
   const excludedRoutes = ["/login", "/signup"];
   return (
     <>

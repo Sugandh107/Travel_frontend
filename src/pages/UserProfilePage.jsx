@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthProvider";
-import useUserData from "../hooks/useUserdata";
+import useUserData from "../hooks/useUserData";
 import { motion } from "framer-motion";
 
 function UserProfilePage() {
