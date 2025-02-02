@@ -87,7 +87,7 @@ const HotelSearch = ({ onSearch, initialValues = {}, isLoading = false }) => {
               type="text"
               value={location}
               onChange={(e) => setLocation(e.target.value)}
-              placeholder="Enter city or hotel name"
+              placeholder="Enter city"
               className="block w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg bg-white placeholder-gray-500 
                        focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500
                        hover:border-gray-400 transition-all cursor-pointer"

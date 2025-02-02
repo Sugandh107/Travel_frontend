@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Plane, Building2 } from 'lucide-react';
 import FlightSearch from './FlightSearch';
 import HotelSearch from './HotelSearch';
@@ -12,6 +12,7 @@ import Footer from '../../components/Footer';
 import Hero from '../../components/Hero';
 import NoResults from '../../components/NoResults';
 import { toast } from 'react-toastify';
+import { AuthContext } from '../../context/AuthProvider';
 
 const TravelBooking = () => {
   const [activeTab, setActiveTab] = useState('flights');
@@ -107,7 +108,7 @@ const TravelBooking = () => {
       const mappingUrl = 'https://api.makcorps.com/mapping';
       const mappingParams = {
         name: params.location,
-        api_key: "679f6f076127b8521ebab150"
+        api_key: "679f7f4d6783ea523e36ce21"
       };
   
       const mappingResponse = await fetch(`${mappingUrl}?${new URLSearchParams(mappingParams)}`);
@@ -157,7 +158,7 @@ const TravelBooking = () => {
         adults: '2',
         checkin: params.checkIn,
         checkout: params.checkOut,
-        api_key: "679f6f076127b8521ebab150"
+        api_key: "679f7f4d6783ea523e36ce21"
       };
   
       const response = await fetch(`${url}?${new URLSearchParams(queryParams)}`);
