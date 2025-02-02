@@ -11,12 +11,16 @@ import Destination from '../../components/Destination';
 import Footer from '../../components/Footer';
 import Hero from '../../components/Hero';
 import NoResults from '../../components/NoResults';
+import { toast } from 'react-toastify';
 
 const TravelBooking = () => {
   const [activeTab, setActiveTab] = useState('flights');
   const [searchResults, setSearchResults] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+
+  const { login,user } = useContext(AuthContext);
+
   const [searchParams, setSearchParams] = useState({
     from: '',
     to: '',
@@ -43,6 +47,9 @@ const TravelBooking = () => {
   };
 
   const fetchFlights = async (params) => {
+    if(!user){
+      toast.error("Login to search")
+    }
     console.log("Searching...")
     setLoading(true);
     window.scrollTo(0, 300);
@@ -88,6 +95,9 @@ const TravelBooking = () => {
   };
 
   const fetchHotels = async (params) => {
+    if(!user){
+      toast.error("Login to search")
+    }
     setLoading(true);
     setError('');
     console.log("HOTELS SEARCHING...");
