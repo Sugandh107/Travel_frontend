@@ -68,9 +68,9 @@ function Navbar() {
           <li>
             <a onClick={handleDestination}>Destination</a>
           </li>
-          <li>
+          {/* <li>
             <a onClick={handlePackages}>Packages</a>
-          </li>
+          </li> */}
         </ul>
       </div>
 
