@@ -20,6 +20,7 @@ import ExpenseTracker from "./pages/ExpenseTracker";
 import Footer from "./components/Footer";
 import FlightBooking from "./pages/FlightBooking";
 import UserSignin from "./components/UserSignin";
+import TravelBooking from "./pages/LandingPage";
 
 function App() {
   
@@ -32,7 +33,7 @@ function App() {
       {!excludedRoutes.includes(location.pathname) && <Navbar />}
       
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<TravelBooking />} />
         <Route path="/packages" element={<Packages />} />
         <Route path="/flights" element={<FlightBooking />} />
         <Route path="/login" element={<Login />} />
