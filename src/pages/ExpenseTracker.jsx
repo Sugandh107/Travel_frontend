@@ -153,7 +153,7 @@ const ExpenseTracker = () => {
                   {expense.name}
                 </h4>
                 <p className="text-gray-700">
-                  <strong>Amount:</strong> ${expense.amount}
+                  <strong>Amount:</strong> Rs:{expense.amount}
                 </p>
                 <p className="text-gray-700">
                   <strong>Category:</strong> {expense.category}
