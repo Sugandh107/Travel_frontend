@@ -108,7 +108,7 @@ const TravelBooking = () => {
       const mappingUrl = 'https://api.makcorps.com/mapping';
       const mappingParams = {
         name: params.location,
-        api_key: "67a05a9fa27d94525a384c80"
+        api_key: "67a2c4c7d6364c5254375d70"
       };
   
       const mappingResponse = await fetch(`${mappingUrl}?${new URLSearchParams(mappingParams)}`);
@@ -158,7 +158,7 @@ const TravelBooking = () => {
         adults: '2',
         checkin: params.checkIn,
         checkout: params.checkOut,
-        api_key: "67a05a9fa27d94525a384c80"
+        api_key: "67a2c4c7d6364c5254375d70"
       };
   
       const response = await fetch(`${url}?${new URLSearchParams(queryParams)}`);
